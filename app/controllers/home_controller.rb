@@ -7,4 +7,8 @@ class HomeController < ApplicationController
     def first
 
     end
+
+    def show_post
+
+    end
 end
