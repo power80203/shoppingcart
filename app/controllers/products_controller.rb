@@ -43,6 +43,8 @@ class ProductsController < ApplicationController
   def new
 
     @note = flash[:note]
+    
+    @product = Product.new
 
   end
 
@@ -55,7 +57,7 @@ class ProductsController < ApplicationController
   end
 
   def product_permit
-    return params.permit([:name, :description, :image_url, :price])
+    return params.require(:product).permit([:name, :description, :image_url, :price])
   end
 
   def edit
