@@ -5,4 +5,8 @@ Rails.application.routes.draw do
 
   resources :products
 
+  get "admin/log_in", to: "admin#log_in"
+  get "admin/log_out", to: "admin#log_out"
+
+
 end
