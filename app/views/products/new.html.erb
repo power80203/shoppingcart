@@ -1,15 +1,18 @@
 <h3>新增產品</h3>
-<%= form_for @product, method: :post do |p|%>
-    <%= p.label :name, "名稱" %>:
-    <%= p.text_field :name %><br />
-    <%= p.label :description, "描述" %>:
-    <%= p.text_field :description %><br />
-    <%= p.label :image_url, "圖片網址" %>:
-    <%= p.text_field :image_url %><br />
-    <%= p.label :price, "價格" %>:
-    <%= p.text_field :price %><br />
-    <%= p.submit "新增"%>
+<%= form_for @product, method: :post do |f|%>
+  <%= f.label :name, "名稱" %>
+  <%= f.text_field :name %><br />
+
+  <%= f.label :description, "敘述" %>
+  <%= f.text_field :description %><br />
+
+  <%= f.label :image_url, "圖片連結" %>
+  <%= f.text_field :image_url %><br />
+
+  <%= f.label :price, "價格" %>
+  <%= f.number_field :price %><br />
+
+  <%= f.submit "新增" %>
 <% end %>
 
 <%= @note%>
-
